@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About — BODH Coaching</title>
+  <title>About | Personalized ADHD coaching — BODH Coaching</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,15 +22,88 @@
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <a href="CONSULT_LINK_PLACEHOLDER" class="btn-dark">Get Started</a>
+      <a href="https://bodhcoaching.as.me/consult" class="btn-dark">Get Started</a>
     </nav>
   </header>
 
-  <div class="stub-content">
-    <h1>About</h1>
-    <p>Content coming soon.</p>
-  </div>
+  <!-- BRAND STATEMENT -->
+  <section class="brand-statement">
+    <blockquote>"BODH (bode) is a hindi word meaning awareness and enlightenment which we seek to instill in our clients."</blockquote>
+    <hr>
+  </section>
 
+  <!-- WHAT IS ADHD COACHING -->
+  <section class="adhd-section">
+    <div class="adhd-inner">
+      <p><span class="adhd-highlight">ADHD coaching</span> is a transformative process that helps young adults build the focus, confidence, and skills they need to thrive. As a parent, you want your son or daughter to flourish both academically and personally. Specialized coaching provides the guidance to navigate this pivotal stage of life with greater ease.</p>
+      <p>Through personalized sessions, an ADHD coach supports young adults in clarifying their goals, managing challenges like procrastination, overwhelm, or inconsistent motivation, and developing practical strategies for success. This process not only enhances self-awareness and resilience but also cultivates a growth mindset that empowers them to excel in school and beyond.</p>
+      <p>ADHD coaching is more than problem-solving; it equips your young adult with tools to lead a life filled with purpose and confidence. By offering structure, accountability, and steady encouragement, coaching helps them build habits and skills to manage life's complexities. Together, we create a path toward lasting independence and meaningful progress.</p>
+    </div>
+  </section>
+
+  <!-- FOUNDER -->
+  <section class="founder-section">
+    <div class="founder-inner">
+      <img src="images/adam-headshot.jpg" alt="Adam B. Rai" class="founder-photo">
+      <div class="founder-text">
+        <h2>Meet Adam B. Rai, Founder</h2>
+        <p>Adam is a dedicated coach who specializes in empowering young adults, particularly those navigating the challenges of ADHD and Executive Functioning. Drawing from his own experiences and mentorship under a Doctor of Neurobiology, Adam combines personal insight with a deep understanding of the psychology of motivation. His coaching emphasizes consistency, positivity, and structure, equipping his clients with the tools they need to build confidence, stay focused, and achieve their goals.</p>
+        <p>With a professional background that spans acting, stand-up comedy, and appearances on HBO, Amazon, and Comedy Central stages, Adam brings a unique perspective to his coaching. His journey through the entertainment industry has taught him the value of persistence, self-belief, and resilience—lessons he passionately shares with his clients.</p>
+        <p>Adam's coaching is about more than goal-setting; it's about transformation. He asks the pivotal question, "What do you want to create for yourself?" and works as an accountability partner to help clients discover their potential, tackle obstacles, and build a life they're proud of. Whether supporting parents of young adults seeking balance and focus or guiding individuals toward their next chapter, Adam is committed to helping his clients thrive.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL CAROUSEL -->
+  <section class="carousel-section">
+    <div class="carousel-header">What People Are Saying</div>
+    <div class="carousel-track-wrap">
+      <div class="carousel-track">
+        <div class="carousel-slide">
+          <blockquote>"Working with Adam was a game-changer for me. His insight and personalized approach helped me overcome years of stagnation. I'm finally pursuing my dreams with confidence!"</blockquote>
+          <p class="slide-author">Michael T.</p>
+        </div>
+        <div class="carousel-slide">
+          <blockquote>"If you're looking for a coach who understands how to overcome challenges while being honest and supportive throughout the process, Adam's your guy! It's been a pleasure working together, and I'll always be grateful for his help along the way! Coaching helped me realize that I don't always have to face challenges alone."</blockquote>
+          <p class="slide-author">Matt F., CEO of Growth Mind Co.</p>
+        </div>
+        <div class="carousel-slide">
+          <blockquote>"The clarity and direction I've gained from Adam's coaching sessions have been transformative. His empathetic yet challenging approach pushed me to achieve goals I thought were out of reach."</blockquote>
+          <p class="slide-author">Priya K.</p>
+        </div>
+        <div class="carousel-slide">
+          <blockquote>"I was skeptical about life coaching until I met Adam. He has a unique ability to connect and bring out the best in people. My outlook on life has completely changed for the better."</blockquote>
+          <p class="slide-author">Jenna W.</p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-controls">
+      <button class="carousel-btn carousel-prev" aria-label="Previous">&#8592;</button>
+      <div class="carousel-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <button class="carousel-btn carousel-next" aria-label="Next">&#8594;</button>
+    </div>
+  </section>
+
+  <!-- PULL QUOTE -->
+  <section class="pull-quote-section">
+    <p>Motivation comes from within — and I'm here to help activate it.</p>
+  </section>
+
+  <!-- CHAT CTA -->
+  <section class="chat-cta-section">
+    <div class="chat-cta-inner">
+      <h2>Chat with me</h2>
+      <p>Join me for a complimentary consultation to explore strategies that empower you to achieve your goals, face challenges with confidence, and unlock your potential for a richer, more fulfilling life.</p>
+      <a href="https://bodhcoaching.as.me/consult" class="btn-dark">Complimentary Consultation</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
       <p class="footer-tagline">They belong here.</p>
@@ -42,6 +115,24 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      const track = document.querySelector('.carousel-track');
+      const dots = document.querySelectorAll('.dot');
+      const total = dots.length;
+      let current = 0;
+      function goTo(n) {
+        current = (n + total) % total;
+        track.style.transform = 'translateX(-' + (current * 100) + '%)';
+        dots.forEach(function(d, i) { d.classList.toggle('active', i === current); });
+      }
+      document.querySelector('.carousel-prev').addEventListener('click', function() { goTo(current - 1); });
+      document.querySelector('.carousel-next').addEventListener('click', function() { goTo(current + 1); });
+      dots.forEach(function(d, i) { d.addEventListener('click', function() { goTo(i); }); });
+      setInterval(function() { goTo(current + 1); }, 6000);
+    })();
+  </script>
 
 </body>
 </html>

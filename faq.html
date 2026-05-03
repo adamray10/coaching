@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FAQ — BODH Coaching</title>
+  <title>FAQ | Get Started — BODH Coaching</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,14 +22,86 @@
         <li><a href="faq.html" class="active">FAQ</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <a href="CONSULT_LINK_PLACEHOLDER" class="btn-dark">Get Started</a>
+      <a href="https://bodhcoaching.as.me/consult" class="btn-dark">Get Started</a>
     </nav>
   </header>
 
-  <div class="stub-content">
-    <h1>FAQ</h1>
-    <p>Content coming soon.</p>
-  </div>
+  <section class="faq-section">
+    <div class="faq-inner">
+      <h1>FAQ</h1>
+
+      <details>
+        <summary>What is the difference between coaching and therapy? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Coaching focuses on the present and future, helping you take actionable steps toward specific goals, while therapy often focuses on emotional distress and the past.</div>
+      </details>
+
+      <details>
+        <summary>What is your approach to coaching? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Our coaching approach is warm, approachable, and relatable, especially for young adults. We tailor the process to each client, encouraging collaboration and empowering them to take an active role in their growth. This approach helps clients build confidence and develop the tools they need to tackle challenges independently, while the coach provides expert guidance, accountability, and support along the way. We employ motivational interviewing and focus on amplifying strengths to create lasting change.</div>
+      </details>
+
+      <details>
+        <summary>What is motivational interviewing? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Motivational interviewing is a client-centered approach that enhances motivation by exploring and resolving ambivalence, helping clients find their own motivation to change.</div>
+      </details>
+
+      <details>
+        <summary>What are your qualifications? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Adam received specialized training in evidence-based life coaching practices from a PhD in neurobiology through an established academic coaching organization. He has years of experience working directly with young adults and families, with a particular focus on ADHD and executive function challenges. Every coach on our team is carefully selected for their experience, professional training, and proven results helping clients create meaningful change.</div>
+      </details>
+
+      <details>
+        <summary>How often do you meet, and is there a minimum session requirement? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Sessions are typically one 50-minute session per week, with the duration depending on the client's goals. Many clients work with us for about a year, but some may pause and return with new goals. Sessions mainly meet on Zoom but can also be by FaceTime or phone call.</div>
+      </details>
+
+      <details>
+        <summary>What is the typical demographic of your clients? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">We primarily work with young adults aged 18 to 25. While this is our main demographic, we occasionally work with clients who are slightly younger or older.</div>
+      </details>
+
+      <details>
+        <summary>How is communication handled with parents? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">We are open about communication with parents. Our phone number is included in all email signatures, and we send follow-up emails after sessions. Parents are encouraged to reach out with specific concerns or reply to follow-up emails.</div>
+      </details>
+
+      <details>
+        <summary>What does a first session look like? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">The first session involves goal-setting, assessing various aspects of the client's life to identify what's going well and what isn't, isolating areas for improvement, and setting both short-term and long-term goals.</div>
+      </details>
+
+      <details>
+        <summary>What if I have an urgent update about my son or daughter? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">We request 24 to 48 hours' notice for any additional requests or updates. These updates can be addressed via a brief scheduled check-in call. While emails are also encouraged, same-day emails may not be read before the session due to respect for other clients.</div>
+      </details>
+
+      <details>
+        <summary>What happens if I need to cancel or reschedule a session? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Clients are allowed two late cancellations per calendar year. A late cancellation is defined as providing less than 24 hours' notice. If less than 24 hours' notice is given and the late cancellation limit has been reached, the session will not be reimbursed and will count as a completed session. This ensures we respect each other's time and have clear expectations.</div>
+      </details>
+
+      <details>
+        <summary>Can sessions be rescheduled for important opportunities? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Of course! Yes, we are willing to waive the 24-hour notice requirement for rescheduling if a client has a significant opportunity, such as in academics, business or a job, aligning with the goal of supporting their success.</div>
+      </details>
+
+      <details>
+        <summary>How can I get another family in touch with you? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">They can <a href="https://bodhcoaching.as.me/consult">schedule a complimentary consultation here</a> or you can share their contact details with client care and they will reach out.</div>
+      </details>
+
+      <details>
+        <summary>What is the timeline for change in coaching? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Many clients start to notice positive shifts in focus, motivation, and confidence within the first few sessions. For others, change builds gradually over time as new habits and perspectives take root. Every individual's journey is unique, and progress can look different for everyone.</div>
+      </details>
+
+      <details>
+        <summary>Do you offer any payment plans or packages? <span class="faq-icon">+</span></summary>
+        <div class="faq-answer">Most clients purchase a package and these package options are listed in our coaching agreement. Also, you can pay per session by having a credit card on file. Payment plans are not currently offered.</div>
+      </details>
+
+    </div>
+  </section>
 
   <footer>
     <div class="footer-inner">
@@ -42,6 +114,14 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    document.querySelectorAll('details').forEach(function(el) {
+      el.addEventListener('toggle', function() {
+        el.querySelector('.faq-icon').textContent = el.open ? '−' : '+';
+      });
+    });
+  </script>
 
 </body>
 </html>
