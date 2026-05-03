@@ -127,7 +127,7 @@
       document.querySelector('.carousel-prev').addEventListener('click', function() { goTo(current - 1); });
       document.querySelector('.carousel-next').addEventListener('click', function() { goTo(current + 1); });
       dots.forEach(function(d, i) { d.addEventListener('click', function() { goTo(i); }); });
-      setInterval(function() { goTo(current + 1); }, 6000);
+      setInterval(function() { goTo(current + 1); }, 8000);
     })();
   </script>
 

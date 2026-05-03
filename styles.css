@@ -79,7 +79,7 @@ header {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 40px;
-  height: 90px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -87,7 +87,7 @@ header {
 }
 
 .navbar .logo img {
-  height: 115px;
+  height: 161px;
   width: auto;
   mix-blend-mode: multiply;
 }
@@ -661,10 +661,8 @@ header {
 
 .team-member-photo {
   width: 100%;
-  max-height: 340px;
-  aspect-ratio: 3/4;
-  object-fit: cover;
-  object-position: center top;
+  max-width: 260px;
+  height: auto;
   margin-bottom: 24px;
 }
 
@@ -933,6 +931,8 @@ footer {
 @media (max-width: 960px) {
   .two-col-inner,
   .two-col-inner.reverse { grid-template-columns: 1fr; direction: ltr; gap: 40px; }
+  .two-col-inner.reverse { display: flex; flex-direction: column; }
+  .two-col-inner.reverse .two-col-text { order: 2; }
   .two-col-photo { height: 300px; }
   .two-col-text h2 { font-size: 2.2rem; }
 
@@ -953,9 +953,9 @@ footer {
 }
 
 @media (max-width: 640px) {
-  .navbar { flex-wrap: wrap; height: auto; padding: 16px 24px; gap: 14px; }
-  .navbar .btn-dark { margin-top: 4px; margin-bottom: 6px; width: 100%; text-align: center; }
-  .nav-links { flex-wrap: wrap; gap: 12px; }
+  .navbar { flex-wrap: wrap; height: auto; padding: 12px 24px; gap: 8px; }
+  .nav-links { flex-wrap: wrap; gap: 12px; width: 100%; }
+  .navbar .btn-dark { margin-top: 14px; margin-bottom: 4px; width: auto; align-self: flex-start; padding: 9px 22px; font-size: 0.875rem; text-align: center; }
 
   .hero { height: 500px; }
   .hero-content { padding: 0 24px; }
