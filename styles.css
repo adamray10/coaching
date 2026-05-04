@@ -519,6 +519,7 @@ header {
   flex-wrap: wrap;
   gap: 2px;
   justify-content: center;
+  align-items: stretch;
   margin-bottom: 16px;
 }
 
@@ -536,7 +537,7 @@ header {
 }
 .newsletter-form input::placeholder { color: #aaa; }
 
-.newsletter-form .btn-dark { padding: 14px 28px; }
+.newsletter-form .btn-dark { padding: 14px 28px; flex-shrink: 0; cursor: pointer; }
 
 .privacy-note {
   font-size: 0.85rem;
@@ -668,10 +669,12 @@ header {
 }
 
 .team-member-photo {
-  width: 100%;
-  max-width: 260px;
-  height: auto;
+  width: 280px;
+  height: 360px;
+  object-fit: cover;
+  object-position: center top;
   margin-bottom: 24px;
+  display: block;
 }
 
 .team-member h3 {
@@ -941,7 +944,8 @@ footer {
   .two-col-inner.reverse { grid-template-columns: 1fr; direction: ltr; gap: 40px; }
   .two-col-inner.reverse { display: flex; flex-direction: column; }
   .two-col-inner.reverse .two-col-text { order: 2; }
-  .two-col-photo { height: 300px; }
+  .two-col-inner.reverse > div { width: 100%; }
+  .two-col-photo { width: 100%; height: auto; max-height: 420px; object-fit: cover; }
   .two-col-text h2 { font-size: 2.2rem; }
 
   .founder-inner { grid-template-columns: 1fr; }
@@ -961,7 +965,8 @@ footer {
 }
 
 @media (max-width: 640px) {
-  .navbar { flex-wrap: wrap; height: auto; padding: 12px 24px; gap: 8px; }
+  .navbar { flex-wrap: wrap; height: auto; padding: 10px 24px; gap: 8px; }
+  .navbar .logo img { height: 72px; }
   .nav-links { flex-wrap: wrap; gap: 12px; width: 100%; }
   .navbar .btn-dark { margin-top: 14px; margin-bottom: 4px; width: auto; align-self: flex-start; padding: 9px 22px; font-size: 0.875rem; text-align: center; }
 
